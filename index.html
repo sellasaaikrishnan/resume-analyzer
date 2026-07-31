@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analyzer Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1><i class="fa-solid fa-file-lines"></i> Resume Analyzer</h1>
+            <p class="subtitle">
+                AI Powered ATS Resume Analysis Dashboard
+            </p>
+        </header>
+
+        <div class="card">
+
+            <div class="upload-box">
+
+                <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+
+                <h2>Upload Your Resume</h2>
+
+                <p>Supported Format : PDF</p>
+
+                <input type="file" id="resume">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+                    <i class="fa-solid fa-briefcase"></i>
+                    Select Job Role
+                </label>
+
+                <select id="role">
+
+                    <option>Software Developer</option>
+
+                    <option>Frontend Developer</option>
+
+                    <option>Backend Developer</option>
+
+                    <option>Java Developer</option>
+
+                    <option>Python Developer</option>
+
+                    <option>Full Stack Developer</option>
+
+                    <option>Data Analyst</option>
+
+                    <option>Machine Learning Engineer</option>
+
+                    <option>UI/UX Designer</option>
+
+                </select>
+
+            </div>
+
+            <button id="analyzeBtn">
+
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+
+                Analyze Resume
+
+            </button>
+
+        </div>
+
+        <div class="results">
+
+            <div class="result-box score-box">
+
+                <h2>ATS Score</h2>
+
+                <div class="score-circle">
+
+                    <span id="score">--</span>
+
+                </div>
+
+            </div>
+
+            <div class="result-box">
+
+                <h2>
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Skills Found
+
+                </h2>
+
+                <ul id="skillsFound">
+
+                    <li>Upload your resume</li>
+
+                </ul>
+
+            </div>
+
+            <div class="result-box">
+
+                <h2>
+
+                    <i class="fa-solid fa-circle-xmark"></i>
+
+                    Missing Skills
+
+                </h2>
+
+                <ul id="missingSkills">
+
+                    <li>Analysis not started</li>
+
+                </ul>
+
+            </div>
+
+            <div class="result-box">
+
+                <h2>
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    Suggestions
+
+                </h2>
+
+                <ul id="suggestions">
+
+                    <li>Upload a resume to begin analysis.</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
